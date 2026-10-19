@@ -20,6 +20,44 @@ Build a reproducible climate analytics workflow that can answer:
 
 The source contains average temperature, uncertainty, date, city, country, latitude, and longitude. It does not contain rainfall, CO₂, sea level, renewable energy, or causal attribution variables.
 
+## Screenshots
+
+All PNG assets from `images/output/` are included below so GitHub renders the dashboard gallery directly in the project README.
+
+### Executive overview
+
+![Executive overview](images/output/overviev.png)
+
+### Global climate trend
+
+![Global climate trend](images/output/global_climate_trend.png)
+
+### Country explorer
+
+![Country explorer](images/output/country_explorer.png)
+
+![Country explorer trend graph](images/output/country_explorer_trendgraph.png)
+
+### City explorer
+
+![City explorer](images/output/city_explorer.png)
+
+![City climate graph](images/output/city_graph.png)
+
+### Climate alert center
+
+![Climate alert center](images/output/climate_alert_center.png)
+
+![Climate alert detail](images/output/alert_2.png)
+
+### Forecast Lab
+
+![Forecast Lab](images/output/forcast_lab.png)
+
+![Forecast graph](images/output/forcast+graph.png)
+
+See [docs/dashboard_showcase_guide.md](docs/dashboard_showcase_guide.md) for the capture and visual QA checklist.
+
 ## Architecture
 
 ```text
@@ -104,44 +142,6 @@ The dashboard reads the canonical processed dataset and report artifacts under `
 ## Results and report artifacts
 
 The repository includes quality, coverage, trend, anomaly, forecast, and statistical report outputs under `outputs/reports/`. These artifacts are the source of truth for dashboard cards and derived insights; the UI does not fabricate climate findings.
-
-## Screenshots
-
-All PNG assets from `images/output/` are included below so GitHub renders the dashboard gallery directly in the project README.
-
-### Executive overview
-
-![Executive overview](images/output/overviev.png)
-
-### Global climate trend
-
-![Global climate trend](images/output/global_climate_trend.png)
-
-### Country explorer
-
-![Country explorer](images/output/country_explorer.png)
-
-![Country explorer trend graph](images/output/country_explorer_trendgraph.png)
-
-### City explorer
-
-![City explorer](images/output/city_explorer.png)
-
-![City climate graph](images/output/city_graph.png)
-
-### Climate alert center
-
-![Climate alert center](images/output/climate_alert_center.png)
-
-![Climate alert detail](images/output/alert_2.png)
-
-### Forecast Lab
-
-![Forecast Lab](images/output/forcast_lab.png)
-
-![Forecast graph](images/output/forcast+graph.png)
-
-See [docs/dashboard_showcase_guide.md](docs/dashboard_showcase_guide.md) for the capture and visual QA checklist.
 
 ## Documentation
 
