@@ -1,106 +1,76 @@
-import matplotlib.pyplot as plt
-import seaborn as sns
+"""Descriptive analyses over the canonical climate observation schema."""
+
+from __future__ import annotations
+
 import numpy as np
-from sklearn.linear_model import LinearRegression
+import pandas as pd
+
+from src.data_loader import CANONICAL_COLUMNS
 
 
-# =========================
-# 🔹 EDA FUNCTION
-# =========================
-def run_eda(df):
-
-    # Sort data (important)
-    df = df.sort_values("Date")
-
-    # 1. Temperature over time
-    plt.figure()
-    plt.plot(df["Date"], df["Temperature"])
-    plt.title("Temperature Trend Over Time")
-    plt.xlabel("Year")
-    plt.ylabel("Temperature")
-    plt.show()
-
-    # 2. Rolling Average (smooth trend)
-    df["Rolling_Mean"] = df["Temperature"].rolling(window=12).mean()
-
-    plt.figure()
-    plt.plot(df["Date"], df["Temperature"], alpha=0.4, label="Actual")
-    plt.plot(df["Date"], df["Rolling_Mean"], label="Rolling Mean")
-    plt.legend()
-    plt.title("Smoothed Temperature Trend")
-    plt.show()
-
-    # 3. Monthly pattern
-    monthly_avg = df.groupby("Month")["Temperature"].mean()
-
-    plt.figure()
-    monthly_avg.plot(kind="bar")
-    plt.title("Average Temperature by Month")
-    plt.xlabel("Month")
-    plt.ylabel("Temperature")
-    plt.show()
-
-    # 4. Distribution
-    plt.figure()
-    sns.histplot(df["Temperature"], kde=True)
-    plt.title("Temperature Distribution")
-    plt.show()
+def _require_canonical(dataframe: pd.DataFrame) -> None:
+    missing = [
+        column for column in CANONICAL_COLUMNS if column not in dataframe.columns
+    ]
+    if missing:
+        raise ValueError(
+            "Analysis requires the canonical schema; missing: " + ", ".join(missing)
+        )
+    if dataframe.empty:
+        raise ValueError("Analysis cannot run on an empty climate dataset.")
 
 
-# =========================
-# 🔹 TREND ANALYSIS
-# =========================
-def trend_analysis(df):
-
-    yearly = df.groupby("Year")["Temperature"].mean().reset_index()
-
-    X = yearly["Year"].values.reshape(-1, 1)
-    y = yearly["Temperature"].values
-
-    model = LinearRegression()
-    model.fit(X, y)
-
-    trend = model.predict(X)
-    slope = model.coef_[0]
-
-    print("\n📊 TREND ANALYSIS RESULT")
-    print(f"Temperature change per year: {slope:.4f} °C")
-
-    if slope > 0:
-        print("📈 Increasing temperature trend (warming)")
-    else:
-        print("📉 Decreasing temperature trend")
-
-    # Plot
-    plt.figure()
-    plt.plot(yearly["Year"], yearly["Temperature"], label="Actual")
-    plt.plot(yearly["Year"], trend, label="Trend Line")
-    plt.legend()
-    plt.title("Yearly Temperature Trend")
-    plt.xlabel("Year")
-    plt.ylabel("Temperature")
-    plt.show()
+def run_eda(dataframe: pd.DataFrame) -> dict[str, pd.DataFrame]:
+    """Return transparent annual and monthly observation summaries."""
+    _require_canonical(dataframe)
+    annual = dataframe.groupby("year", as_index=False).agg(
+        mean_avg_temp_c=("avg_temp_c", "mean"),
+        median_avg_temp_c=("avg_temp_c", "median"),
+        observation_count=("avg_temp_c", "size"),
+        mean_uncertainty_c=("uncertainty_c", "mean"),
+    )
+    monthly = dataframe.groupby("month", as_index=False).agg(
+        mean_avg_temp_c=("avg_temp_c", "mean"),
+        observation_count=("avg_temp_c", "size"),
+    )
+    return {"annual_summary": annual, "month_of_year_summary": monthly}
 
 
-# =========================
-# 🔹 ANOMALY DETECTION
-# =========================
-def detect_anomalies(df):
+def trend_analysis(dataframe: pd.DataFrame) -> dict[str, float | int]:
+    """Estimate a descriptive linear slope across annual observation means.
 
-    mean = df["Temperature"].mean()
-    std = df["Temperature"].std()
+    This is a simple unweighted fit to annual rows, not a causal attribution
+    analysis or a population/area-weighted global temperature estimate.
+    """
+    _require_canonical(dataframe)
+    annual = dataframe.groupby("year", as_index=False)["avg_temp_c"].mean()
+    if len(annual) < 2:
+        raise ValueError(
+            "At least two distinct years are required to estimate a trend."
+        )
+    slope, intercept = np.polyfit(annual["year"].astype(float), annual["avg_temp_c"], 1)
+    return {
+        "slope_c_per_year": float(slope),
+        "intercept": float(intercept),
+        "year_count": len(annual),
+        "first_year": int(annual["year"].min()),
+        "last_year": int(annual["year"].max()),
+    }
 
-    df["Z_score"] = (df["Temperature"] - mean) / std
 
-    anomalies = df[df["Z_score"].abs() > 2]
-
-    print("\n⚠️ ANOMALIES DETECTED:")
-    print(anomalies[["Date", "Temperature"]].head())
-
-    # Plot anomalies
-    plt.figure()
-    plt.plot(df["Date"], df["Temperature"], label="Normal")
-    plt.scatter(anomalies["Date"], anomalies["Temperature"], label="Anomaly")
-    plt.legend()
-    plt.title("Anomaly Detection")
-    plt.show()
+def detect_anomalies(dataframe: pd.DataFrame, threshold: float = 3.5) -> pd.DataFrame:
+    """Flag within-city robust deviations for review; flags are not event labels."""
+    _require_canonical(dataframe)
+    if threshold <= 0:
+        raise ValueError("Anomaly threshold must be greater than zero.")
+    result = dataframe.copy()
+    grouped = result.groupby("city")["avg_temp_c"]
+    medians = grouped.transform("median")
+    absolute_deviation = (result["avg_temp_c"] - medians).abs()
+    mad = absolute_deviation.groupby(result["city"]).transform("median")
+    denominator = 1.4826 * mad.replace(0, np.nan)
+    result["robust_city_score"] = (result["avg_temp_c"] - medians) / denominator
+    result["is_review_flag"] = (
+        result["robust_city_score"].abs().gt(threshold).fillna(False)
+    )
+    return result.loc[result["is_review_flag"]].reset_index(drop=True)

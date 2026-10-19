@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Climate Analyzer Dashboard",
+			"type": "shell",
+			"command": ".\\venv\\Scripts\\streamlit.exe",
+			"args": [
+				"run",
+				"app/app.py"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
