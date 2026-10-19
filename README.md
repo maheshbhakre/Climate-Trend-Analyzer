@@ -107,18 +107,39 @@ The repository includes quality, coverage, trend, anomaly, forecast, and statist
 
 ## Screenshots
 
-![Executive Overview](images/dashboard_overview.png)
+All PNG assets from `images/output/` are included below so GitHub renders the dashboard gallery directly in the project README.
 
-![Global Climate Trends](images/global_climate_trends.png)
+### Executive overview
 
-| Dashboard surface | Preview |
-| --- | --- |
-| Country Explorer | [country_explorer.png](images/country_explorer.png) |
-| City Explorer | [city_explorer.png](images/city_explorer.png) |
-| Climate Alert Center | [climate_alert_center.png](images/climate_alert_center.png) |
-| Forecast Lab | [forecast_lab.png](images/forecast_lab.png) |
-| Statistical Intelligence | [statistical_intelligence.png](images/statistical_intelligence.png) |
-| Data Quality Center | [data_quality_center.png](images/data_quality_center.png) |
+![Executive overview](images/output/overviev.png)
+
+### Global climate trend
+
+![Global climate trend](images/output/global_climate_trend.png)
+
+### Country explorer
+
+![Country explorer](images/output/country_explorer.png)
+
+![Country explorer trend graph](images/output/country_explorer_trendgraph.png)
+
+### City explorer
+
+![City explorer](images/output/city_explorer.png)
+
+![City climate graph](images/output/city_graph.png)
+
+### Climate alert center
+
+![Climate alert center](images/output/climate_alert_center.png)
+
+![Climate alert detail](images/output/alert_2.png)
+
+### Forecast Lab
+
+![Forecast Lab](images/output/forcast_lab.png)
+
+![Forecast graph](images/output/forcast+graph.png)
 
 See [docs/dashboard_showcase_guide.md](docs/dashboard_showcase_guide.md) for the capture and visual QA checklist.
 
