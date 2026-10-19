@@ -1,0 +1,38 @@
+{
+  "observation_count": 228175,
+  "unique_anomaly_observations": 23430,
+  "method_specific_anomaly_count": 30436,
+  "severe_alert_count": 7410,
+  "severity_counts_method_specific": {
+    "NORMAL": 0,
+    "MODERATE": 23026,
+    "SEVERE": 5707,
+    "EXTREME": 1703
+  },
+  "climate_risk": {
+    "frequency_score": 10.268434315766408,
+    "magnitude_score": 26.904698962201028,
+    "persistence_score": 100.0,
+    "climate_risk_score": 38.52401836307692,
+    "risk_level": "Medium"
+  },
+  "detection_methods": [
+    "Seasonal Z-Score",
+    "Seasonal IQR",
+    "Trailing rolling mean deviation"
+  ],
+  "insights": [
+    "The strongest positive anomaly was +9.14 \u00b0C in Saint Petersburg, Russia on 1990-02-01.",
+    "The strongest negative anomaly was -11.23 \u00b0C in Saint Petersburg, Russia on 1987-01-01.",
+    "China contains the highest count of severe or extreme anomalies (911); 247 are EXTREME.",
+    "The largest number of method-specific detections occurred in the 2000s (2,881 alerts).",
+    "The later half of represented years had more flagged observations per represented year on average (120.0) than the earlier half (57.5); changing coverage may affect this comparison.",
+    "The highest location risk score is Kiev, Ukraine (44.1/100, Medium).",
+    "Alerts identify unusual behavior relative to each location's observed monthly history; they are not evidence of climate attribution or impacts."
+  ],
+  "limitations": [
+    "Coverage changes across years and locations; historical frequency comparisons may reflect changing observations.",
+    "Monthly location-specific baselines are descriptive and do not adjust for measurement-system changes or spatial dependence.",
+    "A detected anomaly is unusual relative to available local history and is not causal attribution or proof of impacts."
+  ]
+}

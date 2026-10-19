@@ -1,0 +1,10 @@
+field,canonical_type,description,source_or_derivation,units_or_format
+date,datetime64[ns],Observation calendar date,dt,YYYY-MM-DD
+avg_temp_c,float64,Recorded average temperature,AverageTemperature,°C by canonical convention; source units are undocumented
+uncertainty_c,float64,Recorded temperature uncertainty,AverageTemperatureUncertainty,°C by canonical convention; source definition is undocumented
+city,string,Source city label,City,Name as supplied by source
+country,string,Source country label,Country,Name as supplied by source
+latitude,float64,Signed latitude,Latitude,"Decimal degrees; N positive, S negative"
+longitude,float64,Signed longitude,Longitude,"Decimal degrees; E positive, W negative"
+year,Int64,Calendar year derived from date,Derived from date,Four-digit calendar year
+month,Int64,Calendar month derived from date,Derived from date,Integer 1-12

@@ -1,40 +1,24 @@
 # Climate Trend Analyzer
 
-A Python and Streamlit project for exploring historical average-temperature observations. The Phase 1 dashboard reports only measurements present in the repository's raw dataset and derived calendar/geographic fields.
+An enterprise-style climate intelligence platform built with Python and Streamlit. It turns historical city-level temperature observations into traceable trends, anomaly signals, forecast scenarios, risk scores, and recruiter-ready visual storytelling.
 
-## What the current data supports
+**Author:** Mahesh Bhakre
+**Dashboard:** `streamlit run app/app.py`
 
-The source file `data/raw/climate.csv` has these columns:
+## Project overview
 
-| Source field | Canonical field | Meaning / unit |
-| --- | --- | --- |
-| `dt` | `date` | Observation date |
-| `AverageTemperature` | `avg_temp_c` | Recorded average temperature; represented as °C by the canonical field convention. The source's unit documentation is not bundled in this repository. |
-| `AverageTemperatureUncertainty` | `uncertainty_c` | Recorded temperature uncertainty; represented as °C by convention. Its precise source definition is not bundled. |
-| `City` | `city` | Source city label |
-| `Country` | `country` | Source country label |
-| `Latitude` | `latitude` | Decimal degrees; N positive and S negative |
-| `Longitude` | `longitude` | Decimal degrees; E positive and W negative |
-| derived | `year` | Calendar year derived from `date` |
-| derived | `month` | Calendar month (1–12) derived from `date` |
+Climate data is difficult to communicate when exploration, statistical evidence, anomaly review, forecasting, and data quality are separated across notebooks. Climate Trend Analyzer brings those workflows into one dashboard while keeping the analytical engines and report artifacts auditable.
 
-The repository does not record the dataset publisher, citation, license, or source unit specification. Confirm those details before redistributing the data or using it in a formal research publication. The raw data contains no rainfall, CO₂, sea-level, renewable-energy, forest-cover, or extreme-weather measurements. The application does not synthesize or display these as real climate indicators.
+## Problem statement
 
-### Current repository snapshot
+Build a reproducible climate analytics workflow that can answer:
 
-The inspected raw file has 239,177 rows covering 1743-11-01 through 2013-09-01, 49 country labels, and 100 city labels. There are 11,002 rows with missing temperature and uncertainty values; these are excluded from the 228,175-row canonical analytical dataset and reported in the quality outputs. No malformed dates or duplicate observation keys were found in this snapshot. Re-run preprocessing to refresh these figures when the source file changes.
+- How have observed temperatures changed over time?
+- Which countries and cities show notable warming or anomaly patterns?
+- What does a selected location's forward temperature pattern look like?
+- How trustworthy, complete, and covered is the source dataset?
 
-See [docs/data_dictionary.md](docs/data_dictionary.md) for field-level definitions and [docs/project_audit.md](docs/project_audit.md) for the Phase 1 repository audit.
-
-## Phase 2 analytics
-
-The analyzer now adds descriptive annual/monthly trends, rolling averages, country and city summaries, hemisphere-aware seasonality, decade comparisons, OLS trend statistics, uncertainty summaries, and generated insights. The corresponding CSV reports are written to `outputs/reports/` by `python preprocess.py`.
-
-Phase 3 adds location-specific anomaly detection with seasonal Z-score, IQR, and trailing rolling-deviation methods; severity classes; location risk scores; historical temperature records; and the Climate Alert Center. These signals use observed temperature values only. See [docs/climate_anomaly_engine.md](docs/climate_anomaly_engine.md) for thresholds, score definitions, and limitations.
-
-Phase 4 adds the Forecast Lab with seasonal linear regression, seasonal ARIMA, a seasonal-naive benchmark, chronological holdout metrics, forecast intervals, and a future temperature-pattern risk screen. Forecasts use the latest contiguous observations and do not fill missing months. See [docs/forecasting_lab.md](docs/forecasting_lab.md) for model definitions and limitations.
-
-The Streamlit app retains the Temperature Explorer, DATA QUALITY CENTER, and DATASET OVERVIEW pages and adds Global Climate Trends, Country Explorer, City Explorer, Seasonality Explorer, Decade Analysis, and Statistical Insights. All visuals summarize actual temperature observations. Read [docs/climate_analytics.md](docs/climate_analytics.md) for formulas, interpretation, and limitations.
+The source contains average temperature, uncertainty, date, city, country, latitude, and longitude. It does not contain rainfall, CO₂, sea level, renewable energy, or causal attribution variables.
 
 ## Architecture
 
@@ -42,21 +26,62 @@ The Streamlit app retains the Temperature Explorer, DATA QUALITY CENTER, and DAT
 data/raw/climate.csv
         |
         v
-src/data_loader.py -> normalize fields, dates, coordinates, and screen invalid rows
+preprocess.py -> data/processed/climate_cleaned.csv
         |
-        +--> src/data_validation.py -> quality, schema, and coverage reports
-        +--> src/trend_analysis.py -> Phase 2 analytics reports
+        +--> data_validation.py  -> quality, schema, coverage reports
+        +--> trend_analysis.py   -> trend, decade, seasonality, statistics
+        +--> anomaly_engine.py   -> anomalies, alerts, risk rankings
+        +--> forecast_engine.py  -> forecasts, metrics, confidence bands
         |
-        +--> data/processed/climate_cleaned.csv -> app/app.py
+        v
+app/app.py -> cached Streamlit presentation layer + Plotly visualizations
 ```
 
-- `preprocess.py` provides the reusable data pipeline and command-line entry point.
-- `main.py` runs preprocessing and descriptive summaries.
-- `src/analysis.py` contains descriptive summaries, a simple annual linear trend, and within-city review flags.
-- `src/forecasting.py` contains an experimental location-specific monthly ARIMA helper; it is not presented as validated forecasting.
-- `app/app.py` provides the Phase 1 through Phase 3 pages and the Phase 4 Forecast Lab.
+## Features
 
-## Setup (Windows PowerShell)
+### Climate analytics
+
+- Annual temperature trends
+- Rolling averages
+- Monthly seasonality and heatmaps
+- Decade comparisons
+- Country and city rankings
+- OLS slope, R², correlation, confidence intervals, and interpretations
+
+### Anomaly engine
+
+- Seasonal Z-score, IQR, and rolling-deviation signals
+- Moderate, severe, and extreme severity classes
+- Historical temperature records
+- Country/city anomaly risk scores
+- Filterable Climate Alert Center
+
+### Forecasting Lab
+
+- Country and city forecasting
+- 12, 24, 36, and 60-month horizons
+- Linear regression, ARIMA, and seasonal-naive benchmark models
+- Chronological holdout metrics
+- Forecast confidence bands
+- Future temperature-pattern risk screening
+- AI forecast insights derived from forecast output and metrics
+
+### Ultimate dashboard
+
+- Executive Overview
+- Global Climate Trends
+- Country Explorer
+- City Explorer
+- Climate Alert Center
+- Forecast Lab
+- Statistical Intelligence
+- Data Quality Center
+- Dataset Explorer
+- Platform Information
+
+The UI uses a midnight-navy glassmorphism design system, unified Plotly styling, responsive CSS, accessible labels, cached loaders, hover motion, and visible author credit for **Mahesh Bhakre**.
+
+## Installation
 
 ```powershell
 py -3.10 -m venv venv
@@ -65,60 +90,76 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-## Run
+## Usage
 
 From the repository root:
 
 ```powershell
 python preprocess.py
-python main.py
 streamlit run app/app.py
 ```
 
-The preprocessing command writes the canonical processed dataset to `data/processed/climate_cleaned.csv` and audit CSV files under `outputs/reports/`. The dashboard can regenerate missing audit reports from the raw and processed files.
+The dashboard reads the canonical processed dataset and report artifacts under `outputs/reports/`. Missing report artifacts can be regenerated by the report-generation pipeline.
 
-## Validation and tests
+## Results and report artifacts
+
+The repository includes quality, coverage, trend, anomaly, forecast, and statistical report outputs under `outputs/reports/`. These artifacts are the source of truth for dashboard cards and derived insights; the UI does not fabricate climate findings.
+
+## Screenshots
+
+![Executive Overview](images/dashboard_overview.png)
+
+![Global Climate Trends](images/global_climate_trends.png)
+
+| Dashboard surface | Preview |
+| --- | --- |
+| Country Explorer | [country_explorer.png](images/country_explorer.png) |
+| City Explorer | [city_explorer.png](images/city_explorer.png) |
+| Climate Alert Center | [climate_alert_center.png](images/climate_alert_center.png) |
+| Forecast Lab | [forecast_lab.png](images/forecast_lab.png) |
+| Statistical Intelligence | [statistical_intelligence.png](images/statistical_intelligence.png) |
+| Data Quality Center | [data_quality_center.png](images/data_quality_center.png) |
+
+See [docs/dashboard_showcase_guide.md](docs/dashboard_showcase_guide.md) for the capture and visual QA checklist.
+
+## Documentation
+
+- [Project audit](docs/project_audit.md)
+- [Data dictionary](docs/data_dictionary.md)
+- [Climate analytics](docs/climate_analytics.md)
+- [Climate anomaly engine](docs/climate_anomaly_engine.md)
+- [Forecasting Lab](docs/forecasting_lab.md)
+- [Dashboard design system](docs/dashboard_design_system.md)
+- [Recruiter demo guide](docs/recruiter_demo_guide.md)
+- [Dashboard showcase guide](docs/dashboard_showcase_guide.md)
+
+## Validation
 
 ```powershell
 pytest -q
+python -m compileall -q app src tests preprocess.py main.py
 python -m pip check
 ```
 
-Tests use small in-memory fixtures. They do not replace provenance checks or validation against updated upstream source data.
+Tests cover data loading, validation, trend analysis, anomaly generation, and forecast engine behavior. Runtime validation should always be repeated after refreshing the source dataset.
 
-## Data quality rules
+## Limitations
 
-- Required source fields are validated before processing.
-- Dates are parsed and malformed dates are excluded from the cleaned output and counted in the reports.
-- Coordinates are parsed from decimal values with optional N/S/E/W suffixes and checked against latitude/longitude bounds.
-- Temperature plausibility screening uses a broad range of -90 °C to 60 °C. This is a guardrail, not a domain-specific certification.
-- Rows missing required measurements or location/date values are excluded from the canonical output; source missingness remains visible in quality reports.
-- Duplicate full rows and repeated `(date, city, country)` keys are counted.
-- A 0–100 quality score equally weights completeness, consistency, calendar-month coverage, and validity. Levels are Excellent (≥90), Good (≥75), Moderate (≥60), and Poor (<60). Component definitions are displayed in the quality center and documented in the audit.
+- Coverage is uneven across locations and time.
+- Row-wise means are not automatically population-weighted, area-weighted, or globally representative.
+- Trend estimates are descriptive and not causal attribution.
+- Anomaly flags are screening signals, not confirmed weather events or measurement errors.
+- Future risk is a temperature-pattern screening score, not a calibrated hazard probability or loss model.
+- Source publisher, license, and full unit provenance should be confirmed before formal redistribution or research publication.
 
-## Scientific limitations
+## Future improvements
 
-- Coverage is uneven across locations and time. A row-wise mean is not necessarily population-weighted, area-weighted, or globally representative.
-- Country/city labels are preserved from the source; no external geographic reconciliation is applied.
-- The annual trend is descriptive and does not estimate causal attribution.
-- Robust anomaly flags identify observations for review; they do not confirm extreme-weather events or measurement errors.
-- The experimental ARIMA helper requires at least 36 consecutive monthly observations for one selected city-country pair, performs no imputation, and needs temporal backtesting before decision use.
-- No multi-indicator correlations or causal conclusions are produced.
+- Add a reproducible CI workflow for tests, lint, dependency checks, and screenshot smoke tests.
+- Publish a versioned data provenance manifest and source citation.
+- Add deployment configuration for Streamlit Community Cloud or container hosting.
+- Add geography normalization and population/area-weighted aggregations.
+- Add richer scenario analysis once additional climate indicators are available.
 
-## Repository layout
+## Author information
 
-```text
-app/app.py
-data/raw/climate.csv
-data/processed/climate_cleaned.csv
-docs/data_dictionary.md
-docs/project_audit.md
-outputs/reports/
-src/data_loader.py
-src/data_validation.py
-src/analysis.py
-src/forecasting.py
-preprocess.py
-main.py
-tests/
-```
+**Mahesh Bhakre** — Data Science, climate analytics, forecasting, Streamlit product design, Plotly visualization, and open-source project maintenance.

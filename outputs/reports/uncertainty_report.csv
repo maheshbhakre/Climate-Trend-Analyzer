@@ -1,0 +1,151 @@
+geography_level,geography,average_uncertainty_c,observation_count,temperature_range_reference_c,uncertainty_reliability_score_0_100,score_note
+global,All locations pooled,0.9693434381505424,228175,65.055,98.50996320321184,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Afghanistan,0.9483592644978783,2121,65.055,98.54221925371166,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Angola,0.7458028818443803,1735,65.055,98.85358099785661,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Australia,0.5832803286611888,4138,65.055,99.10340430610839,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Bangladesh,0.8670691153238548,2532,65.055,98.66717528964129,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Brazil,0.877418733009309,12139,65.055,98.65126626237904,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Burma,0.9342097156398104,2532,65.055,98.5639693864579,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Canada,1.3078175740210123,6282,65.055,97.98967400811466,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Chile,0.7226684210526315,1900,65.055,98.88914238559275,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,China,0.8902710860608835,34952,65.055,98.63151012825935,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Colombia,0.7092523107669249,4003,65.055,98.9097651052695,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Congo (Democratic Republic Of The),0.6368449567723344,1735,65.055,99.02106685608742,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Côte D'Ivoire,0.6785694991558807,1777,65.055,98.95692952247194,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Dominican Republic,0.709286361576801,2207,65.055,98.90971276369717,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Egypt,0.9279625165562914,7550,65.055,98.57357233639799,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Ethiopia,0.8335777248362121,1679,65.055,98.71865694437597,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,France,1.595680353758686,3166,65.055,97.54718260893293,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Germany,1.5964197725837017,3166,65.055,97.5460460032531,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,India,0.946046524388483,34627,65.055,98.54577430729617,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Indonesia,0.6036468866418307,3758,65.055,99.0720976302485,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Iran,0.9963299303944315,2155,65.055,98.468480623481,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Iraq,1.0204827586206897,2320,65.055,98.43135384117949,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Italy,1.5532896399241947,3166,65.055,97.61234395523142,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Japan,0.5982943209876542,4050,65.055,99.08032538469348,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Kenya,0.5968384982121573,1678,65.055,99.08256321848873,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Mexico,0.812230303030303,2145,65.055,98.75147136572085,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Morocco,1.3255926561427591,2914,65.055,97.96235084752477,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Nigeria,0.6832203846153846,5200,65.055,98.94978036336119,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Pakistan,0.822495685670262,6490,65.055,98.7356918212739,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Peru,0.8253333333333334,1521,65.055,98.73132990034074,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Philippines,0.6731885205343889,2021,65.055,98.9652009522183,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Russia,1.4975609602021478,6332,65.055,97.6980079006961,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Saudi Arabia,0.9365199688796679,3856,65.055,98.56041815559193,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Senegal,0.7851335470085469,1872,65.055,98.79312343861571,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Singapore,0.6210545808966862,2052,65.055,99.04533920390948,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Somalia,0.8714705181655747,1679,65.055,98.6604096254468,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,South Africa,0.8356767218366258,3746,65.055,98.71543044833354,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,South Korea,0.734761927480916,2096,65.055,98.87055272080406,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Spain,1.4695726468730257,3166,65.055,97.74103044059177,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Sudan,0.890628959276018,1768,65.055,98.63096001955881,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Syria,0.9790302541347315,2479,65.055,98.49507300878528,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Taiwan,0.6620478029937228,2071,65.055,98.9823260272174,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Tanzania,0.5025674653215636,1586,65.055,99.22747296084611,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Thailand,0.75363357079252,2246,65.055,98.84154396926829,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Turkey,1.391653642169066,9239,65.055,97.86080448517552,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Ukraine,1.473162349968414,3166,65.055,97.73551248948057,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,United Kingdom,1.6089624131396085,3166,65.055,97.52676594706078,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,United States,1.2002923394439722,8237,65.055,98.15495759058646,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Vietnam,0.6525427742870952,2069,65.055,98.99693678535533,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+country,Zimbabwe,0.5806976331360946,1690,65.055,99.10737432459288,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Kabul, Afghanistan",0.9483592644978783,2121,65.055,98.54221925371166,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Luanda, Angola",0.7458028818443803,1735,65.055,98.85358099785661,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Melbourne, Australia",0.5682046444121915,2067,65.055,99.12657805793222,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Sydney, Australia",0.5983268952197006,2071,65.055,99.08027531285882,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Dhaka, Bangladesh",0.8670691153238548,2532,65.055,98.66717528964129,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Belo Horizonte, Brazil",0.8952104007633587,2096,65.055,98.62391760700429,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Brasília, Brazil",0.8577857824427481,2096,65.055,98.68144526563255,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Fortaleza, Brazil",0.7750524412296564,1659,65.055,98.80861971988371,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Rio De Janeiro, Brazil",0.9748749999999998,2096,65.055,98.50146030282069,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Salvador, Brazil",0.8649813931297708,2096,65.055,98.6703844544927,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"São Paulo, Brazil",0.8752647900763358,2096,65.055,98.65457721915865,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Rangoon, Burma",0.9342097156398104,2532,65.055,98.5639693864579,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Montreal, Canada",1.338326329194524,3141,65.055,97.9427771436561,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Toronto, Canada",1.2773088188475008,3141,65.055,98.03657087257321,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Santiago, Chile",0.7226684210526315,1900,65.055,98.88914238559275,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Changchun, China",0.9953000863557857,2316,65.055,98.47006365943312,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Chengdu, China",0.8664846541456711,2183,65.055,98.66807370049085,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Chongqing, China",0.8054839174267883,2083,65.055,98.76184164564324,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Dalian, China",0.81207962529274,2135,65.055,98.75170298164208,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Guangzhou, China",0.7465638195777352,2084,65.055,98.85241131415304,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Harbin, China",1.0102550712127751,2317,65.055,98.44707544199098,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Jinan, China",0.8171468330134358,2084,65.055,98.74391386824466,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Nanjing, China",0.7627398648648649,2072,65.055,98.82754613040525,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Peking, China",1.0028854166666668,2304,65.055,98.45840378653959,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Shanghai, China",0.7738774131274131,2072,65.055,98.81042592709643,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Shenyang, China",0.8579822646657571,2199,65.055,98.68114324084888,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Taiyuan, China",1.0365703158805712,2311,65.055,98.40662467776409,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Tangshan, China",0.9990698689956331,2290,65.055,98.46426889709379,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Tianjin, China",1.0028854166666668,2304,65.055,98.45840378653959,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Wuhan, China",0.746310810810811,2072,65.055,98.85280022932778,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Xian, China",0.9347822201317029,2126,65.055,98.56308935495856,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Bogotá, Colombia",0.708414271555996,2018,65.055,98.91105330634694,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Cali, Colombia",0.7101042821158691,1985,65.055,98.90845548825476,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Kinshasa, Congo (Democratic Republic Of The)",0.6368449567723344,1735,65.055,99.02106685608742,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Abidjan, Côte D'Ivoire",0.6785694991558807,1777,65.055,98.95692952247194,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Santo Domingo, Dominican Republic",0.709286361576801,2207,65.055,98.90971276369717,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Alexandria, Egypt",0.9939471117779446,2666,65.055,98.47214339900401,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Cairo, Egypt",0.8919438984438987,2442,65.055,98.62893874653155,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Gizeh, Egypt",0.8919438984438987,2442,65.055,98.62893874653155,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Addis Abeba, Ethiopia",0.8335777248362121,1679,65.055,98.71865694437597,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Paris, France",1.595680353758686,3166,65.055,97.54718260893293,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Berlin, Germany",1.5964197725837017,3166,65.055,97.5460460032531,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Ahmadabad, India",0.9509154411764708,2448,65.055,98.53828999896017,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Bangalore, India",0.912482057416268,2508,65.055,98.59736829234299,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Bombay, India",0.9401251993620414,2508,65.055,98.55487633638914,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Calcutta, India",0.8803819115323854,2532,65.055,98.64671138032067,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Delhi, India",0.9485831244778613,2394,65.055,98.54187514491144,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Hyderabad, India",0.956286283891547,2508,65.055,98.53003414973246,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Jaipur, India",0.9515435598165903,2399,65.055,98.5373244795687,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Kanpur, India",0.9621349918433932,2452,65.055,98.5210437447646,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Lakhnau, India",0.9621349918433932,2452,65.055,98.5210437447646,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Madras, India",0.9994832535885169,2508,65.055,98.46363345847587,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Nagpur, India",0.9544685007974483,2508,65.055,98.53282837476374,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"New Delhi, India",0.9485831244778613,2394,65.055,98.54187514491144,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Pune, India",0.9455817384370017,2508,65.055,98.54648875807086,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Surat, India",0.9338799840510368,2508,65.055,98.56447623695176,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Jakarta, Indonesia",0.5416748270356573,1879,65.055,99.16735865492944,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Surabaya, Indonesia",0.6656189462480042,1879,65.055,98.97683660556758,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Mashhad, Iran",0.9963299303944315,2155,65.055,98.468480623481,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Baghdad, Iraq",1.0204827586206897,2320,65.055,98.43135384117949,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Rome, Italy",1.5532896399241947,3166,65.055,97.61234395523142,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Nagoya, Japan",0.5839147783251232,2030,65.055,99.1024290549149,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Tokyo, Japan",0.6127450495049505,2020,65.055,99.05811229036208,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Nairobi, Kenya",0.5968384982121573,1678,65.055,99.08256321848873,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Mexico, Mexico",0.812230303030303,2145,65.055,98.75147136572085,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Casablanca, Morocco",1.3255926561427591,2914,65.055,97.96235084752477,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Ibadan, Nigeria",0.6487373619988379,1721,65.055,99.00278631619578,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Kano, Nigeria",0.7676054619407321,1721,65.055,98.82006692500079,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Lagos, Nigeria",0.6343686006825938,1758,65.055,99.0248734137536,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Faisalabad, Pakistan",0.7673518963034085,2083,65.055,98.82045669617492,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Karachi, Pakistan",0.9213463855421686,2324,65.055,98.58374239406322,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Lahore, Pakistan",0.7673518963034085,2083,65.055,98.82045669617492,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Lima, Peru",0.8253333333333334,1521,65.055,98.73132990034074,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Manila, Philippines",0.6731885205343889,2021,65.055,98.9652009522183,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Moscow, Russia",1.4582340492735313,3166,65.055,97.75845968907304,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Saint Petersburg, Russia",1.5368878711307645,3166,65.055,97.63755611231917,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Jiddah, Saudi Arabia",0.8833944805194804,1848,65.055,98.64208057717396,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Riyadh, Saudi Arabia",0.9854123505976096,2008,65.055,98.485262699873,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Dakar, Senegal",0.7851335470085469,1872,65.055,98.79312343861571,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Singapore, Singapore",0.6210545808966862,2052,65.055,99.04533920390948,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Mogadishu, Somalia",0.8714705181655747,1679,65.055,98.6604096254468,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Cape Town, South Africa",0.9128761345435132,1873,65.055,98.59676253240563,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Durban, South Africa",0.7584773091297383,1873,65.055,98.83409836426141,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Seoul, South Korea",0.734761927480916,2096,65.055,98.87055272080406,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Madrid, Spain",1.4695726468730257,3166,65.055,97.74103044059177,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Umm Durman, Sudan",0.890628959276018,1768,65.055,98.63096001955881,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Aleppo, Syria",0.9790302541347315,2479,65.055,98.49507300878528,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Taipei, Taiwan",0.6620478029937228,2071,65.055,98.9823260272174,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Dar Es Salaam, Tanzania",0.5025674653215636,1586,65.055,99.22747296084611,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Bangkok, Thailand",0.75363357079252,2246,65.055,98.84154396926829,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Ankara, Turkey",1.3078519524617997,2945,65.055,97.98962116292091,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Istanbul, Turkey",1.444198041692988,3166,65.055,97.78003529061104,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Izmir, Turkey",1.4173698849104857,3128,65.055,97.82127448326726,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Kiev, Ukraine",1.473162349968414,3166,65.055,97.73551248948057,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"London, United Kingdom",1.6089624131396085,3166,65.055,97.52676594706078,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Chicago, United States",1.326927730022286,3141,65.055,97.96029862420677,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Los Angeles, United States",0.7978993424380375,1977,65.055,98.77350035748515,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"New York, United States",1.3278233408143636,3119,65.055,97.95892192634793,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Ho Chi Minh City, Vietnam",0.6525427742870952,2069,65.055,98.99693678535533,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.
+city,"Harare, Zimbabwe",0.5806976331360946,1690,65.055,99.10737432459288,Range-relative uncertainty heuristic; not a calibrated probability or full data-quality score.

@@ -1,0 +1,10 @@
+field,required,present,dtype,record_count,missing_count,status
+date,True,True,datetime64[ns],228175,0,PASS
+avg_temp_c,True,True,float64,228175,0,PASS
+uncertainty_c,True,True,float64,228175,0,PASS
+city,True,True,string,228175,0,PASS
+country,True,True,string,228175,0,PASS
+latitude,True,True,float64,228175,0,PASS
+longitude,True,True,float64,228175,0,PASS
+year,True,True,Int64,228175,0,PASS
+month,True,True,Int64,228175,0,PASS

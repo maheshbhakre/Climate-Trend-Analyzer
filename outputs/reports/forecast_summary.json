@@ -1,0 +1,35 @@
+{
+  "forecast_origin": "2013-09-01 00:00:00",
+  "forecast_horizon_months": 12,
+  "evaluation_holdout_months": 12,
+  "training_window_max_months": 720,
+  "location_forecast_count": 150,
+  "global_best_model": "linear_regression",
+  "global_validation_metrics": {
+    "mae_c": 0.46850796087922086,
+    "rmse_c": 1.0715143686777242,
+    "mape_pct": 2.494330087586703,
+    "r_squared": 0.9352985603061152
+  },
+  "global_future_risk": {
+    "frequency_score": 0.0,
+    "magnitude_score": 0.0,
+    "persistence_score": 0.0,
+    "future_climate_risk_score": 0.0,
+    "risk_level": "Low",
+    "forecast_months_outside_recent_5_95_percent_range": 0
+  },
+  "insights": [
+    "The selected model projects a mean of 19.73 \u00b0C over the forecast horizon for Global pooled.",
+    "The forecast changes from 20.39 \u00b0C in its first month to 23.03 \u00b0C in its final month.",
+    "linear_regression had the lowest held-out RMSE (1.072 \u00b0C over 12 months).",
+    "The future temperature-pattern risk score is 0.0/100 (Low); this is a screening score, not a calibrated hazard probability."
+  ],
+  "limitations": [
+    "Forecast origin is the dataset's last observed month; historical data do not extend to the present.",
+    "Only the latest contiguous observed segment is modeled; gaps are not interpolated.",
+    "Global and country averages are unweighted across available city rows and may change with location coverage.",
+    "Confidence intervals are model-based prediction intervals and do not include an interpretation of the source uncertainty field because its definition and covariance are not available here.",
+    "Risk scores screen forecast temperatures against recent local historical monthly ranges; they are not hazard probabilities or impact estimates."
+  ]
+}

@@ -1,0 +1,5 @@
+record_type,date,country,city,observed_temperature_c,expected_temperature_c,deviation_c,anomaly_score,severity,method_used
+Highest observed temperature,2000-07-01,Iraq,Baghdad,38.283,,,,RECORD,Observed record
+Lowest observed temperature,1922-01-01,China,Harbin,-26.772,,,,RECORD,Observed record
+Largest positive deviation,1990-02-01,Russia,Saint Petersburg,1.2569999999999997,-7.885234848484847,9.142234848484847,2.5945753146513395,EXTREME,Seasonal Z-Score
+Largest negative deviation,1987-01-01,Russia,Saint Petersburg,-18.589,-7.362,-11.226999999999999,3.0369406456787638,EXTREME,Seasonal IQR
